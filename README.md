@@ -564,3 +564,80 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/AL2002MI08/gym_git_exercises.git
    fc97206..2258153  ft/faq-page -> ft/faq-page
 ```
+## exercise 2
+```bash
+ PS C:\Users\alexa\Desktop\git_exercise> git checkout -b ft/home-page-redesign       
+Switched to a new branch 'ft/home-page-redesign'
+PS C:\Users\alexa\Desktop\git_exercise> git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "add faq page"
+[ft/home-page-redesign bf21009] add faq page
+ 1 file changed, 238 insertions(+)
+PS C:\Users\alexa\Desktop\git_exercise> git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\alexa\Desktop\git_exercise> git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/faq-page'.
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "add faq page"
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+nothing to commit, working tree clean
+PS C:\Users\alexa\Desktop\git_exercise> git push
+Everything up-to-date
+PS C:\Users\alexa\Desktop\git_exercise> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "add home page redesign branch"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\alexa\Desktop\git_exercise> git push
+Everything up-to-date
+PS C:\Users\alexa\Desktop\git_exercise> git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+PS C:\Users\alexa\Desktop\git_exercise> git rebase main
+Current branch ft/home-page-redesign is up to date.
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "added changes to home page"
+[ft/home-page-redesign b292b4d] added changes to home page
+ 1 file changed, 1 insertion(+)
+PS C:\Users\alexa\Desktop\git_exercise> git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\alexa\Desktop\git_exercise>  git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 2.41 KiB | 1.20 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/AL2002MI08/gym_git_exercises/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/AL2002MI08/gym_git_exercises.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+```
