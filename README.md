@@ -1,6 +1,6 @@
 # Bundle 1
 ## exercise 1
-```
+```bash
 PS C:\Users\alexa\Desktop\git_exercise> git init
 Initialized empty Git repository in C:/Users/alexa/Desktop/git_exercise/.git/
 PS C:\Users\alexa\Desktop\git_exercise> git add .\README.md
@@ -204,3 +204,96 @@ To https://github.com/AL2002MI08/gym_git_exercises.git
    42b575d..7c13787  main -> main
 ```
 
+## exercise 2
+```bash
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "update readme"
+[main 086a874] update readme
+ 1 file changed, 57 insertions(+), 2 deletions(-)
+PS C:\Users\alexa\Desktop\git_exercise> git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "add content to about page"
+[ft/footer 476ccf5] add content to about page
+ 1 file changed, 1 insertion(+)
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "add link to home page"
+[ft/footer b28f834] add link to home page
+ 1 file changed, 1 insertion(+)
+PS C:\Users\alexa\Desktop\git_exercise> git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\alexa\Desktop\git_exercise> git push --set-upstream origin ft/footer
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.68 KiB | 245.00 KiB/s, done.
+Total 9 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/AL2002MI08/gym_git_exercises/pull/new/ft/footer
+remote:
+To https://github.com/AL2002MI08/gym_git_exercises.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+PS C:\Users\alexa\Desktop\git_exercise> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+PS C:\Users\alexa\Desktop\git_exercise> git branch ft/squashing
+PS C:\Users\alexa\Desktop\git_exercise> git checkout ft/squashing
+Switched to branch 'ft/squashing'
+PS C:\Users\alexa\Desktop\git_exercise> git merge squash ft/footer
+merge: squash - not something we can merge
+PS C:\Users\alexa\Desktop\git_exercise> git merge --squash ft/footer
+Updating 086a874..b28f834
+Fast-forward
+Squash commit -- not updating HEAD
+ about.html | 1 +
+ home.html  | 1 +
+ 2 files changed, 2 insertions(+)
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "footer changes squashing"
+[ft/squashing eedb323] footer changes squashing
+ 2 files changed, 2 insertions(+)
+PS C:\Users\alexa\Desktop\git_exercise> git push origin ft/squashing
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 518 bytes | 259.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/AL2002MI08/gym_git_exercises/pull/new/ft/squashing
+remote:
+To https://github.com/AL2002MI08/gym_git_exercises.git
+ * [new branch]      ft/squashing -> ft/squashing
+PS C:\Users\alexa\Desktop\git_exercise> git push git-copy
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.57 KiB | 321.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/AL2002MI08/gym_git_exercises_repo2/pull/new/ft/squashing
+remote:
+To https://github.com/AL2002MI08/gym_git_exercises_repo2.git
+ * [new branch]      ft/squashing -> ft/squashing
+PS C:\Users\alexa\Desktop\git_exercise> git remote
+git-copy
+origin
+PS C:\Users\alexa\Desktop\git_exercise> git push git-copy ft/squashing
+Everything up-to-date
+```
