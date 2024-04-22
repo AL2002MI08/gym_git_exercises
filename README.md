@@ -326,3 +326,241 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/AL2002MI08/gym_git_exercises.git
    b54e96d..82e850c  ft/service-redesign -> ft/service-redesign
 ```
+
+# bundle3
+## exercise 1
+```bash
+PS C:\Users\alexa\Desktop\git_exercise> git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+PS C:\Users\alexa\Desktop\git_exercise> git add .\team.html
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "team page"
+[ft/team-page e6fab28] team page
+ 1 file changed, 13 insertions(+)
+ create mode 100644 team.html
+PS C:\Users\alexa\Desktop\git_exercise> git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\alexa\Desktop\git_exercise> git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 446 bytes | 446.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/AL2002MI08/gym_git_exercises/pull/new/ft/team-page
+remote:
+To https://github.com/AL2002MI08/gym_git_exercises.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+PS C:\Users\alexa\Desktop\git_exercise> git checkout main
+M       README.md
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\alexa\Desktop\git_exercise> git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+PS C:\Users\alexa\Desktop\git_exercise> git checkout ft/team-page 
+M       README.md
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+PS C:\Users\alexa\Desktop\git_exercise> git log
+commit e6fab2863085a64b52860ea120f8895d1360368b (HEAD -> ft/team-page, origin/ft/team-page)
+Author: AL2002MI08 <alexandramizero@gmail.com>
+Date:   Mon Apr 22 16:21:28 2024 +0200
+
+    team page
+
+commit 82e850c0ac907af6340bc00f5ee4cc66d86c9e51 (origin/ft/service-redesign, ft/service-redesign)
+Merge: b54e96d 42b575d
+Author: AL2002MI08 <alexandramizero@gmail.com>
+Date:   Mon Apr 22 16:07:39 2024 +0200
+
+    add changes and feature branch
+
+commit 42b575d5cf1bf56f780f1cdea2c2546a4e809715 (origin/main, main, ft/contact-page)
+Author: AL2002MI08 <alexandramizero@gmail.com>
+Date:   Mon Apr 22 15:55:40 2024 +0200
+
+    add new content to service page
+
+commit b54e96d8927ca5bafec79bb866ec448ea179c3c8
+Author: AL2002MI08 <alexandramizero@gmail.com>
+Date:   Mon Apr 22 15:48:14 2024 +0200
+
+    added div
+
+PS C:\Users\alexa\Desktop\git_exercise> git checkout ft/contact-page
+M       README.md
+Switched to branch 'ft/contact-page'
+PS C:\Users\alexa\Desktop\git_exercise> git cherry-pick e6fab2863085a64b52860ea120f8895d1360368b
+[ft/contact-page 2219297] team page
+ Date: Mon Apr 22 16:21:28 2024 +0200
+ 1 file changed, 13 insertions(+)
+ create mode 100644 team.html
+PS C:\Users\alexa\Desktop\git_exercise> ls 
+
+
+    Directory: C:\Users\alexa\Desktop\git_exercise
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         4/22/2024   3:44 PM            266 about.html
+-a----         4/22/2024   3:44 PM            292 home.html
+-a----         4/22/2024   4:25 PM          15194 README.md
+-a----         4/22/2024   4:39 PM            561 services.html
+-a----         4/22/2024   4:41 PM            268 team.html
+
+
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git status
+On branch ft/contact-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+PS C:\Users\alexa\Desktop\git_exercise> git add .\contact.html
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "add contact page"
+[ft/contact-page 5fab2a4] add contact page
+ 2 files changed, 191 insertions(+), 2 deletions(-)
+ create mode 100644 contact.html
+PS C:\Users\alexa\Desktop\git_exercise> git push
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\alexa\Desktop\git_exercise>  git push --set-upstream origin ft/contact-page
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 3.86 KiB | 1.93 MiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/AL2002MI08/gym_git_exercises/pull/new/ft/contact-page
+remote:
+To https://github.com/AL2002MI08/gym_git_exercises.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+PS C:\Users\alexa\Desktop\git_exercise> git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+PS C:\Users\alexa\Desktop\git_exercise> git branch
+  dev
+  ft/bundle-2
+  ft/contact-page
+* ft/faq-page
+  ft/service-redesign
+  ft/team-page
+  main
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "add faq page"
+[ft/faq-page fc97206] add faq page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+PS C:\Users\alexa\Desktop\git_exercise> git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\alexa\Desktop\git_exercise>  git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 458 bytes | 458.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/AL2002MI08/gym_git_exercises/pull/new/ft/faq-page
+remote:
+To https://github.com/AL2002MI08/gym_git_exercises.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+PS C:\Users\alexa\Desktop\git_exercise> git log
+commit fc9720655048afb40633c33b726c81d13a02ed7f (HEAD -> ft/faq-page, origin/ft/faq-page)
+Revert "team page"
+Author: AL2002MI08 <alexandramizero@gmail.com>
+Date:   Mon Apr 22 17:07:10 2024 +0200
+
+    add faq page
+
+commit 5fab2a4639345e9adfa1c29fb98d4db5de66b706 (origin/ft/contact-page, ft/contact-page)
+Author: AL2002MI08 <alexandramizero@gmail.com>
+Date:   Mon Apr 22 16:46:06 2024 +0200
+
+    add contact page
+
+commit 2219297c15f1bcf685f43d5b249b04aebc0f6c84
+Author: AL2002MI08 <alexandramizero@gmail.com>
+Date:   Mon Apr 22 16:21:28 2024 +0200
+
+    team page
+
+commit 42b575d5cf1bf56f780f1cdea2c2546a4e809715 (origin/main, main)
+Author: AL2002MI08 <alexandramizero@gmail.com>
+Date:   Mon Apr 22 15:55:40 2024 +0200
+
+    add new content to service page
+
+commit f2d6658ff0904c0ab8e1649a7b95b58d53ee2363
+PS C:\Users\alexa\Desktop\git_exercise> git revert  2219297c15f1bcf685f43d5b249b04aebc0f6c84
+[ft/faq-page 2258153] Revert "team page"
+ 1 file changed, 13 deletions(-)
+ delete mode 100644 team.html
+PS C:\Users\alexa\Desktop\git_exercise> git log
+commit 2258153f78e8b38786b647b6d7ad9f2d1dafaef5 (HEAD -> ft/faq-page)
+Author: AL2002MI08 <alexandramizero@gmail.com>
+Date:   Mon Apr 22 17:12:13 2024 +0200
+
+    Revert "team page"
+
+    This reverts commit 2219297c15f1bcf685f43d5b249b04aebc0f6c84.
+
+commit fc9720655048afb40633c33b726c81d13a02ed7f (origin/ft/faq-page)
+Author: AL2002MI08 <alexandramizero@gmail.com>
+Date:   Mon Apr 22 17:07:10 2024 +0200
+
+    add faq page
+
+commit 5fab2a4639345e9adfa1c29fb98d4db5de66b706 (origin/ft/contact-page, ft/contact-page)
+Author: AL2002MI08 <alexandramizero@gmail.com>
+Date:   Mon Apr 22 16:46:06 2024 +0200
+
+    add contact page
+
+commit 2219297c15f1bcf685f43d5b249b04aebc0f6c84
+Author: AL2002MI08 <alexandramizero@gmail.com>
+Date:   Mon Apr 22 16:21:28 2024 +0200
+
+    team page
+PS C:\Users\alexa\Desktop\git_exercise> git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 276 bytes | 276.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/AL2002MI08/gym_git_exercises.git
+   fc97206..2258153  ft/faq-page -> ft/faq-page
+```
