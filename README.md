@@ -297,3 +297,125 @@ origin
 PS C:\Users\alexa\Desktop\git_exercise> git push git-copy ft/squashing
 Everything up-to-date
 ```
+
+# bundle5 
+## exercise 2
+```bash
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git clone https://github.com/AL2002MI08/git-cafe-exercise
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git add .
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git commit -m "modified html"
+[main 8b21800] modified html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git push  
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 302 bytes | 151.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/AL2002MI08/git-cafe-exercise
+   29d5870..8b21800  main -> main
+```
+# exercise 6 
+## exercise 1,2 and 3
+```bash
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git add .
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git commit -m "modified html"
+[main 8b21800] modified html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git push  
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 302 bytes | 151.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/AL2002MI08/git-cafe-exercise
+   29d5870..8b21800  main -> main
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git add .
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git commit -m "add list to menu page"
+[feature-branch dd127ec] add list to menu page
+ 1 file changed, 3 insertions(+)
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git push
+fatal: The current branch feature-branch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature-branch
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\alexa\Desktop\git-cafe-exercise>  git push --set-upstream origin feature-branch
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 335 bytes | 335.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'feature-branch' on GitHub by visiting:
+remote:      https://github.com/AL2002MI08/git-cafe-exercise/pull/new/feature-branch
+remote:
+To https://github.com/AL2002MI08/git-cafe-exercise
+ * [new branch]      feature-branch -> feature-branch
+branch 'feature-branch' set up to track 'origin/feature-branch'.
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git checkout -b bug-fix
+Switched to a new branch 'bug-fix'
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git add .
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git commit -m "changed index4 html to contact"
+[bug-fix 9e941dd] changed index4 html to contact
+ 1 file changed, 203 insertions(+), 203 deletions(-)
+ rename index-4.html => Contact.html (98%)
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git push
+fatal: The current branch bug-fix has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin bug-fix
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\alexa\Desktop\git-cafe-exercise>  git push --set-upstream origin bug-fix
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.50 KiB | 1.25 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'bug-fix' on GitHub by visiting:
+remote:      https://github.com/AL2002MI08/git-cafe-exercise/pull/new/bug-fix
+remote:
+To https://github.com/AL2002MI08/git-cafe-exercise
+ * [new branch]      bug-fix -> bug-fix
+branch 'bug-fix' set up to track 'origin/bug-fix'.
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git add .
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git status
+On branch bug-fix
+Your branch is up to date with 'origin/bug-fix'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Contact.html
+
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git commit -m "changed tel number"
+[bug-fix 0c16e6a] changed tel number
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\alexa\Desktop\git-cafe-exercise> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/AL2002MI08/git-cafe-exercise
+   9e941dd..0c16e6a  bug-fix -> bug-fix
+PS C:\Users\alexa\Desktop\git-cafe-exercise>
+```
