@@ -149,6 +149,33 @@ PS C:\Users\alexa\Desktop\git_exercise> git reset --hard
 HEAD is now at 4f24dd1 added about and home page
 PS C:\Users\alexa\Desktop\git_exercise>
 ```
+
+
+# Bundle 2
+## exercise 1 and exercise 2
+```bash
+PS C:\Users\alexa\Desktop\git_exercise> git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+PS C:\Users\alexa\Desktop\git_exercise> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\alexa\Desktop\git_exercise> git branch     
+  dev
+  ft/bundle-2
+* main
+PS C:\Users\alexa\Desktop\git_exercise> git checkout ft/bundle-2
+Switched to branch 'ft/bundle-2'
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "added service page"
+[ft/bundle-2 d9ca2b5] added service page
+ 1 file changed, 15 insertions(+)
+ create mode 100644 services.html
+PS C:\Users\alexa\Desktop\git_exercise> git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+```
 # bundle 4
 ## exercise 1
 ```bash
@@ -225,6 +252,7 @@ fatal: The current branch ft/footer has no upstream branch.
 To push the current branch and set the remote as upstream, use
 
     git push --set-upstream origin ft/footer
+>>>>>>> main
 
 To have this happen automatically for branches without a tracking
 upstream, see 'push.autoSetupRemote' in 'git help config'.
@@ -385,6 +413,73 @@ Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
 Delta compression using up to 12 threads
 Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 483 bytes | 483.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/AL2002MI08/gym_git_exercises/pull/new/ft/bundle-2
+remote:
+To https://github.com/AL2002MI08/gym_git_exercises.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+PS C:\Users\alexa\Desktop\git_exercise> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\alexa\Desktop\git_exercise> git pull
+Already up to date.
+PS C:\Users\alexa\Desktop\git_exercise> git pull origin main
+From https://github.com/AL2002MI08/gym_git_exercises
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "merged files"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\alexa\Desktop\git_exercise> git push origin main
+To https://github.com/AL2002MI08/gym_git_exercises.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/AL2002MI08/gym_git_exercises.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\alexa\Desktop\git_exercise> git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 907 bytes | 302.00 KiB/s, done.
+From https://github.com/AL2002MI08/gym_git_exercises
+   c6c7a32..f2d6658  main       -> origin/main
+Updating c6c7a32..f2d6658
+Fast-forward
+ README.md     | 118 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ about.html    |  12 ++++++
+ home.html     |  12 ++++++
+ services.html |  15 ++++++++
+ 4 files changed, 157 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+PS C:\Users\alexa\Desktop\git_exercise> git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "added div"
+[ft/service-redesign b54e96d] added div
+ 1 file changed, 3 insertions(+)
+PS C:\Users\alexa\Desktop\git_exercise> git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\alexa\Desktop\git_exercise>  git push --set-upstream origin ft/service-redesign
 Writing objects: 100% (3/3), 2.50 KiB | 1.25 MiB/s, done.
 Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
@@ -412,10 +507,75 @@ Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 12 threads
 Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+Writing objects: 100% (3/3), 619 bytes | 619.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/AL2002MI08/gym_git_exercises/pull/new/ft/service-redesign
+remote:
+To https://github.com/AL2002MI08/gym_git_exercises.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+PS C:\Users\alexa\Desktop\git_exercise> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "add new content to service page"
+[main 42b575d] add new content to service page
+ 1 file changed, 1 insertion(+)
+PS C:\Users\alexa\Desktop\git_exercise> git push  
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 601 bytes | 601.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/AL2002MI08/gym_git_exercises.git
+   f2d6658..42b575d  main -> main
+PS C:\Users\alexa\Desktop\git_exercise> git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+PS C:\Users\alexa\Desktop\git_exercise> git diff main
+diff --git a/services.html b/services.html
+index 4e69a02..f9363f3 100644
+--- a/services.html
++++ b/services.html
+@@ -11,6 +11,8 @@
+         <li>car washing</li>
+         <li>party hosting</li>
+     </ul>
+-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem consequatur quia consectetur error distinctio numquam, possimus, assumenda commodi unde dolorum illum corrupti non natus vero animi porro velit sequi nulla?</p>
++    <div class="description">
++       <span><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro assumenda cupiditate, tenetur saepe corporis, eligendi nisi doloribus cum placeat eos reiciendis incidunt nemo aliquam ex nesciunt itaque, aliquid illo dolorum.</p></span>
++    </div>
+ </body>
+ </html>
+\ No newline at end of file
+PS C:\Users\alexa\Desktop\git_exercise> git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\alexa\Desktop\git_exercise> git merge main
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+PS C:\Users\alexa\Desktop\git_exercise> git add .\services.html
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "add changes services page"
+[ft/service-redesign e26bb23] add changes services page
+PS C:\Users\alexa\Desktop\git_exercise> git commit --amend -m "add changes and feature branch"
+[ft/service-redesign 82e850c] add changes and feature branch
+ Date: Mon Apr 22 16:07:39 2024 +0200
+PS C:\Users\alexa\Desktop\git_exercise> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 505 bytes | 505.00 KiB/s, done.
 Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To https://github.com/AL2002MI08/git-cafe-exercise
-   9e941dd..0c16e6a  bug-fix -> bug-fix
-PS C:\Users\alexa\Desktop\git-cafe-exercise>
+To https://github.com/AL2002MI08/gym_git_exercises.git
+   b54e96d..82e850c  ft/service-redesign -> ft/service-redesign
 ```
