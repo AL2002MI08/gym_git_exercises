@@ -149,6 +149,33 @@ PS C:\Users\alexa\Desktop\git_exercise> git reset --hard
 HEAD is now at 4f24dd1 added about and home page
 PS C:\Users\alexa\Desktop\git_exercise>
 ```
+
+# Bundle 2
+## exercise 1 and exercise 2
+```bash
+PS C:\Users\alexa\Desktop\git_exercise> git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+PS C:\Users\alexa\Desktop\git_exercise> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\alexa\Desktop\git_exercise> git branch     
+  dev
+  ft/bundle-2
+* main
+PS C:\Users\alexa\Desktop\git_exercise> git checkout ft/bundle-2
+Switched to branch 'ft/bundle-2'
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "added service page"
+[ft/bundle-2 d9ca2b5] added service page
+ 1 file changed, 15 insertions(+)
+ create mode 100644 services.html
+PS C:\Users\alexa\Desktop\git_exercise> git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+```
+
 # bundle 4
 ## exercise 1
 ```bash
@@ -226,9 +253,10 @@ To push the current branch and set the remote as upstream, use
 
     git push --set-upstream origin ft/footer
 
+
 To have this happen automatically for branches without a tracking
 upstream, see 'push.autoSetupRemote' in 'git help config'.
-
+PS C:\Users\alexa\Desktop\git_exercise> git push --set-upstream origin ft/bundle-2
 PS C:\Users\alexa\Desktop\git_exercise> git push --set-upstream origin ft/footer
 Enumerating objects: 13, done.
 Counting objects: 100% (13/13), done.
@@ -381,10 +409,79 @@ To have this happen automatically for branches without a tracking
 upstream, see 'push.autoSetupRemote' in 'git help config'.
 
 PS C:\Users\alexa\Desktop\git-cafe-exercise>  git push --set-upstream origin bug-fix
+>>>>>>> main
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
 Delta compression using up to 12 threads
 Compressing objects: 100% (3/3), done.
+<<<<<<< HEAD
+Writing objects: 100% (3/3), 483 bytes | 483.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/AL2002MI08/gym_git_exercises/pull/new/ft/bundle-2
+remote:
+To https://github.com/AL2002MI08/gym_git_exercises.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+PS C:\Users\alexa\Desktop\git_exercise> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\alexa\Desktop\git_exercise> git pull
+Already up to date.
+PS C:\Users\alexa\Desktop\git_exercise> git pull origin main
+From https://github.com/AL2002MI08/gym_git_exercises
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "merged files"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\alexa\Desktop\git_exercise> git push origin main
+To https://github.com/AL2002MI08/gym_git_exercises.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/AL2002MI08/gym_git_exercises.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\alexa\Desktop\git_exercise> git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 907 bytes | 302.00 KiB/s, done.
+From https://github.com/AL2002MI08/gym_git_exercises
+   c6c7a32..f2d6658  main       -> origin/main
+Updating c6c7a32..f2d6658
+Fast-forward
+ README.md     | 118 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ about.html    |  12 ++++++
+ home.html     |  12 ++++++
+ services.html |  15 ++++++++
+ 4 files changed, 157 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+PS C:\Users\alexa\Desktop\git_exercise> git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+PS C:\Users\alexa\Desktop\git_exercise> git add .
+PS C:\Users\alexa\Desktop\git_exercise> git commit -m "added div"
+[ft/service-redesign b54e96d] added div
+ 1 file changed, 3 insertions(+)
+PS C:\Users\alexa\Desktop\git_exercise> git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\alexa\Desktop\git_exercise>  git push --set-upstream origin ft/service-redesign
 Writing objects: 100% (3/3), 2.50 KiB | 1.25 MiB/s, done.
 Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
@@ -408,14 +505,8 @@ PS C:\Users\alexa\Desktop\git-cafe-exercise> git commit -m "changed tel number"
 [bug-fix 0c16e6a] changed tel number
  1 file changed, 1 insertion(+), 1 deletion(-)
 PS C:\Users\alexa\Desktop\git-cafe-exercise> git push
+>>>>>>> main
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 12 threads
 Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
-Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To https://github.com/AL2002MI08/git-cafe-exercise
-   9e941dd..0c16e6a  bug-fix -> bug-fix
-PS C:\Users\alexa\Desktop\git-cafe-exercise>
-```
